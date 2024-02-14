@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import { Providers } from "./providers";
+import { Container } from "@chakra-ui/react";
+
+import Navbar from "./components/navbar";
 
 const inter = Inter({
-  weight: '400', 
-  subsets: ["latin"] 
+  weight: '400',
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
@@ -20,7 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}><Providers>{children}</Providers></body>
+      <body className={inter.className}>
+        <Providers>
+          <Navbar />
+          <Container maxW={"container.md"} pt={14}>
+            {children}
+          </Container>
+        </Providers>
+      </body>
     </html>
   );
 }

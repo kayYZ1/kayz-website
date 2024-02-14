@@ -4,9 +4,7 @@ import {
 	Box,
 	Flex,
 	HStack,
-	Text,
 	IconButton,
-	useDisclosure,
 	useColorMode,
 	useColorModeValue,
 	Stack,
@@ -54,8 +52,8 @@ export default function Navbar() {
 			zIndex={2}>
 			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
 				<Flex align={"center"} mr={5}>
-					<Heading as="h1" size="medium">
-						kayz-website
+					<Heading as="h2" size="medium">
+						Portfiolio website
 					</Heading>
 				</Flex>
 				<Stack
@@ -76,7 +74,6 @@ export default function Navbar() {
 					<Button onClick={toggleColorMode}>
 						{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 					</Button>
-
 					<Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
 						<Menu isLazy id="nav-menu">
 							<MenuButton
