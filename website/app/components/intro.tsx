@@ -1,7 +1,7 @@
 "use client"
 
 import { StarIcon } from '@chakra-ui/icons';
-import { Heading, Box, List, Text, ListItem, ListIcon } from '@chakra-ui/react';
+import { Heading, Box, List, Text, ListItem, ListIcon, Link } from '@chakra-ui/react';
 
 const Intro: React.FC = () => {
   return (
@@ -11,7 +11,17 @@ const Intro: React.FC = () => {
       </Heading>
       <Box paddingTop={5}>
         <p style={{ textIndent: "25px" }}>Hello, my name is Kacper and I am an aspiring web developer living in Opole, Poland.
-          Currently, I am in my 3rd year studying Computer Science at Opole University Of Technology. </p>
+          Currently, in my 3rd year studying Computer Science at Opole University Of Technology. </p>
+        <br></br>
+        <p>Please feel free to check out my
+          <Link href='https://github.com/kayYZ1' isExternal paddingLeft={"3px"} paddingRight={"3px"}>
+            Github
+          </Link>
+          and
+          <Link href='https://www.linkedin.com/in/kacper-manczyk/' isExternal paddingLeft={"3px"}>
+            LinkedIn
+          </Link>
+        </p>
       </Box>
       <Heading as="h2" size="2xl" fontWeight={300} paddingTop={5}>
         Skills
