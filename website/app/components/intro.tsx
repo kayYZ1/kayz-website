@@ -19,7 +19,7 @@ const Intro: React.FC = () => {
           </Link>
           and
           <Link href='https://www.linkedin.com/in/kacper-manczyk/' isExternal paddingLeft={"3px"}>
-            LinkedIn
+            LinkedIn.
           </Link>
         </p>
       </Box>

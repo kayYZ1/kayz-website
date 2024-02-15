@@ -84,8 +84,8 @@ export default function Navbar() {
 							/>
 							<MenuList>
 								{Links.map((link) => (
-									<MenuItem>
-										<NavLink key={link}>{link}</NavLink>
+									<MenuItem key={link}>
+										<NavLink>{link}</NavLink>
 									</MenuItem>
 								))}
 							</MenuList>
