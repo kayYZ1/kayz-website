@@ -11,7 +11,7 @@ const CardComponent = ({ title, description, image, githubLinks, demoLink }: IPr
     >
       <Image
         objectFit='cover'
-        maxW={{ base: '100%', sm: '250px' }}
+        boxSize={"250px"}
         src={image}
       />
 
@@ -25,11 +25,15 @@ const CardComponent = ({ title, description, image, githubLinks, demoLink }: IPr
         </CardBody>
 
         <CardFooter>
-          <Button variant='solid' colorScheme='blue'>
-            Buy Latte
-          </Button>
+          {githubLinks.length > 1 ?
+            githubLinks.map((link, index) =>
+              <Link href={link} key={index} isExternal>
+                <Button colorScheme="blue" marginLeft={3}>Link #{index}</Button>
+              </Link>)
+            : <Link href={githubLinks[0]} isExternal><Button colorScheme="blue" marginLeft={3}>Link</Button></Link>
+          }
           {demoLink !== "" ?
-            <Link href={demoLink} isExternal><Button variant='solid' colorScheme="gray" marginLeft={3}>Demo</Button></Link>
+            <Link href={demoLink} isExternal><Button colorScheme="gray" marginLeft={3}>Demo</Button></Link>
             : ""
           }
         </CardFooter>
