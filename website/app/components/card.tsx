@@ -11,7 +11,7 @@ const CardComponent = ({ title, description, image, githubLinks, demoLink }: IPr
     >
       <Image
         objectFit='cover'
-        boxSize={"250px"}
+        maxW={{ base: '100%', sm: '250px' }}
         src={image}
       />
 
