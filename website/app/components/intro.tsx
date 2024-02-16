@@ -6,7 +6,7 @@ import { Heading, Box, List, Text, ListItem, ListIcon, Link } from '@chakra-ui/r
 const Intro: React.FC = () => {
   return (
     <div>
-      <Heading as="h2" size="2xl" fontWeight={300}>
+      <Heading as="h4" fontWeight={300}>
         Introduction
       </Heading>
       <Box paddingTop={5}>
@@ -23,7 +23,7 @@ const Intro: React.FC = () => {
           </Link>
         </p>
       </Box>
-      <Heading as="h2" size="2xl" fontWeight={300} paddingTop={5}>
+      <Heading as="h4" fontWeight={300} paddingTop={5}>
         Skills
       </Heading>
       <Box paddingTop={5}>
