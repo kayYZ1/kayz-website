@@ -5,7 +5,7 @@ import { Heading, Box, List, Text, ListItem, ListIcon, Link } from '@chakra-ui/r
 
 const Intro: React.FC = () => {
   return (
-    <div>
+    <div id="intro">
       <Heading as="h4" fontWeight={300}>
         Introduction
       </Heading>

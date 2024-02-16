@@ -1,3 +1,5 @@
+"use client"
+
 import { Heading } from "@chakra-ui/react";
 import CardComponent from "./card";
 
@@ -25,7 +27,7 @@ const ProjectsInfo: IProjectInfo[] =
 
 const Projects: React.FC = () => {
   return (
-    <div>
+    <div id="projects">
       <Heading as="h4" fontWeight={300} paddingTop={5}>
         Projects
       </Heading>

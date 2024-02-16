@@ -15,19 +15,20 @@ import {
 	MenuButton,
 	MenuList,
 	MenuItem,
+	Text,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 
-interface Props {
-	children: React.ReactNode
+interface ILinks {
+	id: number;
+	link: string;
+	name: string;
 }
 
-const Links = ['Intro', 'Projects']
+const Links = [{ id: 1, link: "#intro", name: "Intro" }, { id: 2, link: "#projects", name: "Projects" }]
 
-const NavLink = (props: Props) => {
-	const { children } = props
-
+const NavLink = (props: ILinks) => {
 	return (
 		<Box
 			as="a"
@@ -38,8 +39,8 @@ const NavLink = (props: Props) => {
 				textDecoration: 'none',
 				bg: useColorModeValue('gray.200', 'gray.700'),
 			}}
-			href={'#'}>
-			{children}
+			href={props.link}>
+			{props.name}
 		</Box>
 	)
 }
@@ -53,7 +54,7 @@ export default function Navbar() {
 			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
 				<Flex align={"center"} mr={5}>
 					<Heading as="h2" size="medium">
-						Portfiolio website
+						<Text as="a" href="/">Portfolio-website</Text>
 					</Heading>
 				</Flex>
 				<Stack
@@ -65,9 +66,7 @@ export default function Navbar() {
 					mt={{ base: 4, md: 0 }}
 				>
 					<HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-						{Links.map((link) => (
-							<NavLink key={link}>{link}</NavLink>
-						))}
+						{Links.map((Link) => <NavLink {...Link} key={Link.id} />)}
 					</HStack>
 				</Stack>
 				<Box flex={1} alignItems="right">
@@ -84,8 +83,8 @@ export default function Navbar() {
 							/>
 							<MenuList>
 								{Links.map((link) => (
-									<MenuItem key={link}>
-										<NavLink>{link}</NavLink>
+									<MenuItem>
+										<NavLink {...link} key={link.id} />
 									</MenuItem>
 								))}
 							</MenuList>
