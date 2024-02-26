@@ -1,5 +1,6 @@
 'use client'
 
+import { Link } from '@chakra-ui/react'
 import {
   Box,
   Container,
@@ -10,7 +11,7 @@ import {
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
+      bg={useColorModeValue('gray.50', 'dark.700')}
       color={useColorModeValue('gray.700', 'gray.200')}
       marginTop={5}
     >
@@ -18,7 +19,7 @@ export default function Footer() {
         maxW={'6xl'}
         py={4}
         alignItems={"center"}>
-        <Text>@ 2024 https://github.com/kayYZ1. All rights reserved</Text>
+        <Text><Link href="https://github.com/kayYZ1" isExternal>https://github.com/kayYZ1</Link></Text>
       </Container>
     </Box>
   )
