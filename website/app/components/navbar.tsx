@@ -16,9 +16,11 @@ import {
 	MenuList,
 	MenuItem,
 	Text,
+	Icon,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { MoonIcon, SunIcon, AtSignIcon } from '@chakra-ui/icons'
+import Link from 'next/link';
 
 interface ILinks {
 	id: number;
@@ -53,8 +55,9 @@ export default function Navbar() {
 			zIndex={2}>
 			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
 				<Flex align={"center"} mr={5}>
-					<Heading as="h2" size="medium">
-						<Text as="a" href="/">Portfolio-website</Text>
+					<Heading as="h2" size="medium" paddingLeft={"5px"}>
+						<AtSignIcon paddingRight={"2px"} />
+						<Link href="/">Kacper</Link>
 					</Heading>
 				</Flex>
 				<Stack

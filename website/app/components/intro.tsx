@@ -1,7 +1,7 @@
 "use client"
 
 import { StarIcon } from '@chakra-ui/icons';
-import { Heading, Box, List, Text, ListItem, ListIcon, Link } from '@chakra-ui/react';
+import { Heading, Box, List, Text, ListItem, ListIcon, Link, Button, Divider } from '@chakra-ui/react';
 
 const Intro: React.FC = () => {
   return (
@@ -22,6 +22,9 @@ const Intro: React.FC = () => {
             LinkedIn.
           </Link>
         </p>
+        <Button colorScheme='teal' variant='solid' marginTop={"5px"} float={"right"}>
+          CV
+        </Button>
       </Box>
       <Heading as="h4" fontWeight={300} paddingTop={5}>
         Skills
