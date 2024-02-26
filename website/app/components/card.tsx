@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, Image, CardBody, CardFooter, Button, Heading, Text, Stack, Link } from "@chakra-ui/react";
-import { IProjectInfo } from "../app.interfaces";
+import { IProjectInfo } from "../interfaces";
 
 const CardComponent = ({ title, description, image, githubLinks, demoLink }: IProjectInfo) => {
   return (
