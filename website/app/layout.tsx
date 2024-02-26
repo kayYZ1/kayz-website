@@ -7,7 +7,7 @@ import { Container } from "@chakra-ui/react";
 import Navbar from "./components/navbar";
 
 const inter = Inter({
-  weight: '400',
+  weight: '300',
   subsets: ["latin"]
 });
 
