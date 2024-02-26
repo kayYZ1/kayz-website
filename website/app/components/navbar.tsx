@@ -37,7 +37,7 @@ const NavLink = (props: ILinks) => {
 			rounded={'md'}
 			_hover={{
 				textDecoration: 'none',
-				bg: useColorModeValue('dark.200', 'dark.700'),
+				bg: useColorModeValue('light.100', 'dark.500'),
 			}}
 			href={props.link}>
 			{props.name}
@@ -49,7 +49,7 @@ export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode()
 
 	return (
-		<Box position={"fixed"} as="nav" w="100%" bg={useColorModeValue('dark.100', 'dark.800')} css={{ backdropFilter: 'blur(10px)' }}
+		<Box position={"fixed"} as="nav" w="100%" bg={useColorModeValue('light.25', 'dark.600')} css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={2}>
 			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
 				<Flex align={"center"} mr={5}>

@@ -1,13 +1,22 @@
 'use client'
 
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { mode } from '@chakra-ui/theme-tools'
 
 const customTheme = extendTheme({
   config: {
     initialColorMode: "dark"
   },
+  styles: {
+    global: (props: any) => ({
+      body: {
+        bg: mode('light.50', 'dark.700')(props),
+      }
+    })
+  },
   colors: {
     dark: {
+      25: "#fdfdfd",
       50: "#f0f0f0", // Light gray
       100: "#d1d5db",
       200: "#a5adb8",
@@ -19,6 +28,18 @@ const customTheme = extendTheme({
       800: "#1f232c",
       900: "#15181e",
     },
+    light: {
+      50: "#f9f9f9", // Lightest gray
+      100: "#e0e0e0",
+      200: "#c0c0c0",
+      300: "#a0a0a0",
+      400: "#808080",
+      500: "#606060", // Primary color for light mode (medium gray)
+      600: "#505050",
+      700: "#404040",
+      800: "#303030",
+      900: "#202020",
+    }
   },
   fonts: {
     body: "Inter, sans-serif",
