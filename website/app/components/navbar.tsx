@@ -15,8 +15,6 @@ import {
 	MenuButton,
 	MenuList,
 	MenuItem,
-	Text,
-	Icon,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { MoonIcon, SunIcon, AtSignIcon } from '@chakra-ui/icons'
@@ -39,7 +37,7 @@ const NavLink = (props: ILinks) => {
 			rounded={'md'}
 			_hover={{
 				textDecoration: 'none',
-				bg: useColorModeValue('light.100', 'dark.500'),
+				bg: useColorModeValue('light.100', 'dark.600'),
 			}}
 			href={props.link}>
 			{props.name}

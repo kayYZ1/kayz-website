@@ -3,7 +3,15 @@
 import { Heading } from "@chakra-ui/react";
 import CardComponent from "./card";
 
-import { IProjectInfo } from "../app.interfaces";
+interface IProjectInfo {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  githubLinks: string[];
+  demoLink: string;
+}
+
 
 const ProjectsInfo: IProjectInfo[] =
   [
