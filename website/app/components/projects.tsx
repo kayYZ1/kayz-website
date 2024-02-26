@@ -3,7 +3,7 @@
 import { Heading } from "@chakra-ui/react";
 import CardComponent from "./card";
 
-interface IProjectInfo {
+export interface IProjectInfo {
   id: number;
   title: string;
   description: string;
