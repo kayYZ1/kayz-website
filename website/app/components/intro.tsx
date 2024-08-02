@@ -12,7 +12,7 @@ const Intro: React.FC = () => {
         </WrapItem>
         <Box>
           <Text fontSize='xl'>Kacper</Text>
-          <Text fontSize='sm'>Jr Software Developer</Text>
+          <Text fontSize='sm'>Jr. Software Developer (Hopefully)</Text>
         </Box>
       </HStack>
     </Box >

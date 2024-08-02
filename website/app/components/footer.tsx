@@ -1,6 +1,5 @@
 'use client'
 
-import { Link } from '@chakra-ui/react';
 import {
   Container,
   Text,
@@ -25,14 +24,14 @@ export default function Footer() {
         maxW={'6xl'}
       >
         <HStack display="flex" justifyContent="space-between">
-          <Text>
-            <Link href="https://github.com/kayYZ1" isExternal>https://github.com/kayYZ1</Link>
+          <Text fontSize="sm">
+            @2024 kayz
           </Text>
           <Box>
             <IconButton
               size="sm"
               as="a"
-              href="https://github.com/your-github-profile"
+              href="https://github.com/kayYZ1"
               aria-label="GitHub"
               icon={<FaGithub />}
               ml={2}
