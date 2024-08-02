@@ -1,82 +1,21 @@
 "use client"
 
-import { StarIcon } from '@chakra-ui/icons';
-import { Heading, Box, List, Text, ListItem, ListIcon, Link, Button, Divider } from '@chakra-ui/react';
+import { Box, Avatar, Text, WrapItem, HStack } from "@chakra-ui/react";
 
 const Intro: React.FC = () => {
   return (
-    <div id="intro">
-      <Heading as="h4" fontWeight={300}>
-        Introduction
-      </Heading>
-      <Box paddingTop={5}>
-        <p style={{ textIndent: "25px" }}>Hello, my name is Kacper and I am an aspiring web developer living in Opole, Poland.
-          Currently, in my 3rd year studying Computer Science at Opole University Of Technology. </p>
-        <br></br>
-        <p>Please feel free to check out my
-          <Link href='https://github.com/kayYZ1' isExternal paddingLeft={"3px"} paddingRight={"3px"}>
-            Github
-          </Link>
-          and
-          <Link href='https://www.linkedin.com/in/kacper-manczyk/' isExternal paddingLeft={"3px"}>
-            LinkedIn.
-          </Link>
-        </p>
-        <Button colorScheme='teal' variant='solid' marginTop={"5px"} float={"right"}>
-          CV
-        </Button>
-      </Box>
-      <Heading as="h4" fontWeight={300} paddingTop={5}>
-        Skills
-      </Heading>
-      <Box paddingTop={5}>
-        <Text fontSize={"medium"}>Frontend</Text>
-        <List spacing={3} paddingLeft={2} paddingTop={2}>
-          <ListItem>
-            <ListIcon as={StarIcon} />
-            TypeScript, JavaScript, HTML, CSS.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={StarIcon} />
-            React, Angular and to some extent Vue.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={StarIcon} />
-            Familiarity with Bootstrap, TailwindCSS and Material components libraries such as MaterialUI, AntDesign or ChakraUI.
-          </ListItem>
-        </List>
-        <Box paddingTop={3}>
-          <p style={{ textIndent: "25px" }}>While working on side projects, I mainly use React with TypeScript
-            but thanks to my recent usage of NestJS i indirectly managed to hone my Angular basics.</p>
+    <Box w="100%" p={2} display="flex">
+      <HStack spacing="24px">
+        <WrapItem>
+          <Avatar size="xl" name="gh-avatar"
+            src="https://avatars.githubusercontent.com/u/106306274?s=400&u=cc5ee13eeb28a2385bb361d395d506a14ea6a792&v=4" />
+        </WrapItem>
+        <Box>
+          <Text fontSize='xl'>Kacper</Text>
+          <Text fontSize='sm'>Jr Software Developer</Text>
         </Box>
-        <Text fontSize={"medium"} paddingTop={5}>Backend</Text>
-        <List spacing={3} paddingLeft={2} paddingTop={2}>
-          <ListItem>
-            <ListIcon as={StarIcon} />
-            Familiarity with C# ASP.NET Core and WPF.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={StarIcon} />
-            Knowledge of TypeScript backend frameworks such as NodeJS(Express) and NestJS.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={StarIcon} />
-            Familiar with relational databases: PostgreSQL and MySQL and non-relational databases, mainly MongoDB.
-          </ListItem>
-        </List>
-        <Text fontSize={"medium"} paddingTop={5}>CI/CD, Testing</Text>
-        <List spacing={3} paddingLeft={2} paddingTop={2}>
-          <ListItem>
-            <ListIcon as={StarIcon} />
-            In terms of CI/CD i mainly use Github Actions, but I also wrote pipelines in Jenkins.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={StarIcon} />
-            For testing applications i usually used Jest for both Backend and Frontend.
-          </ListItem>
-        </List>
-      </Box>
-    </div>
+      </HStack>
+    </Box >
   )
 };
 

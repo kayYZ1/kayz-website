@@ -1,18 +1,16 @@
-import CatPicture from "./components/cat";
 import Footer from "./components/footer";
 import Intro from "./components/intro";
-import Projects from "./components/projects";
 
 import * as React from 'react';
 
+import { Flex } from "@chakra-ui/react";
+
 const Home: React.FC = () => {
   return (
-    <div>
-      <CatPicture />
+    <Flex direction="column" minH="90vh">
       <Intro />
-      <Projects />
       <Footer />
-    </div>
+    </Flex>
   )
 };
 

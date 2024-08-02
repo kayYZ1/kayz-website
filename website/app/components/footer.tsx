@@ -1,25 +1,53 @@
 'use client'
 
-import { Link } from '@chakra-ui/react'
+import { Link } from '@chakra-ui/react';
 import {
-  Box,
   Container,
   Text,
-  useColorModeValue,
-} from '@chakra-ui/react'
+  IconButton,
+  HStack,
+  Box
+} from '@chakra-ui/react';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'dark.700')}
-      color={useColorModeValue('gray.700', 'gray.200')}
-      marginTop={5}
+      as="footer"
+      position="absolute"
+      width={"100%"}
+      maxWidth={700}
+      bottom={0}
+      py={4}
+      pr={4}
     >
       <Container
         maxW={'6xl'}
-        py={4}
-        alignItems={"center"}>
-        <Text><Link href="https://github.com/kayYZ1" isExternal>https://github.com/kayYZ1</Link></Text>
+      >
+        <HStack display="flex" justifyContent="space-between">
+          <Text>
+            <Link href="https://github.com/kayYZ1" isExternal>https://github.com/kayYZ1</Link>
+          </Text>
+          <Box>
+            <IconButton
+              size="sm"
+              as="a"
+              href="https://github.com/your-github-profile"
+              aria-label="GitHub"
+              icon={<FaGithub />}
+              ml={2}
+            />
+
+            <IconButton
+              size="sm"
+              as="a"
+              href="https://www.linkedin.com/in/your-linkedin-profile"
+              aria-label="LinkedIn"
+              icon={<FaLinkedin />}
+              ml={2}
+            />
+          </Box>
+        </HStack>
       </Container>
     </Box>
   )

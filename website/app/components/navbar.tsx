@@ -2,14 +2,12 @@
 
 import {
 	Box,
-	Flex,
 	HStack,
 	IconButton,
 	useColorMode,
 	useColorModeValue,
 	Stack,
 	Button,
-	Heading,
 	Container,
 	Menu,
 	MenuButton,
@@ -17,8 +15,9 @@ import {
 	MenuItem,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { MoonIcon, SunIcon, AtSignIcon } from '@chakra-ui/icons'
-import Link from 'next/link';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 interface ILinks {
 	id: number;
@@ -52,16 +51,10 @@ export default function Navbar() {
 		<Box position={"fixed"} as="nav" w="100%" bg={useColorModeValue('light.25', 'dark.700')} css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={2}>
 			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
-				<Flex align={"center"} mr={5}>
-					<Heading as="h2" size="medium" paddingLeft={"5px"}>
-						<AtSignIcon paddingRight={"2px"} />
-						<Link href="/">Kacper</Link>
-					</Heading>
-				</Flex>
 				<Stack
 					direction={{ base: 'column', md: 'row' }}
 					display={{ base: 'none', md: 'flex' }}
-					width={{ base: 'full', md: 'auto' }}
+					width={{ base: 'full', md: 'max-content' }}
 					alignItems="center"
 					flexGrow={1}
 					mt={{ base: 4, md: 0 }}
@@ -70,7 +63,7 @@ export default function Navbar() {
 						{Links.map((Link) => <NavLink {...Link} key={Link.id} />)}
 					</HStack>
 				</Stack>
-				<Box flex={1} alignItems="right">
+				<Box flex={1} justifyContent="space-between">
 					<Button onClick={toggleColorMode}>
 						{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 					</Button>

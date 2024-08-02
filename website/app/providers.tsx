@@ -4,44 +4,41 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 
 const customTheme = extendTheme({
-  config: {
-    initialColorMode: "dark"
-  },
   styles: {
     global: (props: any) => ({
       body: {
-        bg: mode('light.50', 'dark.700')(props),
-      }
-    })
+        bg: mode('gray.100', 'gray.700')(props),
+        color: mode('gray.800', 'gray.100')(props),
+      },
+    }),
   },
   colors: {
-    dark: {
-      25: "#fdfdfd",
-      50: "#f0f0f0",
-      100: "#d1d5db",
-      200: "#a5adb8",
-      300: "#7a879e",
-      400: "#58606e",
-      500: "#404f5e",
-      600: "#333c48",
-      700: "#2a303b",
-      800: "#1f232c",
-      900: "#15181e",
+    brand: {
+      50: '#e3f2f9',
+      100: '#c5e4f3',
+      200: '#a2d4ec',
+      300: '#7ac1e4',
+      400: '#47a9da',
+      500: '#0088cc',
+      600: '#007ab8',
+      700: '#339bb3',
+      800: '#2d7b8e',
+      900: '#24576a',
     },
-    light: {
-      50: "#f9f9f9",
-      100: "#e0e0e0",
-      200: "#c0c0c0",
-      300: "#a0a0a0",
-      400: "#808080",
-      500: "#606060",
-      600: "#505050",
-      700: "#404040",
-      800: "#303030",
-      900: "#202020",
-    }
-  }
-})
+    secondary: {
+      50: '#ffe3e3',
+      100: '#ffbdbd',
+      200: '#ff9b9b',
+      300: '#f86a6a',
+      400: '#ef4e4e',
+      500: '#e12d39',
+      600: '#cf1124',
+      700: '#b71c1c',
+      800: '#9e1919',
+      900: '#851515',
+    },
+  },
+});
 
 
 export function Providers({ children }: { children: React.ReactNode }) {
