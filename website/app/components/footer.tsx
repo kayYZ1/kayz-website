@@ -19,7 +19,7 @@ export default function Footer() {
       py={4}
     >
       <Container
-        maxW={'3xl'}
+        maxW={"container.md"}
       >
         <HStack display="flex" justifyContent="space-between">
           <Text fontSize="sm">

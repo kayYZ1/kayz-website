@@ -24,7 +24,7 @@ interface ILinks {
 	name: string;
 }
 
-const Links = [{ id: 1, link: "about", name: "About" }, { id: 2, link: "work", name: "Work" }]
+const Links = [{ id: 1, link: "/", name: "Home" }, { id: 2, link: "work", name: "Work" }]
 
 const NavLink = (props: ILinks) => {
 	return (
@@ -51,7 +51,7 @@ export default function Navbar() {
 	return (
 		<Box position={"fixed"} as="nav" w="100%" css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={2}>
-			<Container display={"flex"} p={2} maxW={'3xl'} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
+			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
 				<Stack
 					direction={{ base: 'column', md: 'row' }}
 					display={{ base: 'none', md: 'flex' }}
