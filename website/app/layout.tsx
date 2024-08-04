@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import { Container } from "@chakra-ui/react";
 
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 const inter = Inter({
   weight: '300',
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Container maxW={"container.md"} pt={20}>
             {children}
           </Container>
+          <Footer />
         </Providers>
       </body>
     </html>

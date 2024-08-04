@@ -13,15 +13,13 @@ export default function Footer() {
   return (
     <Box
       as="footer"
+      w="100%"
       position="absolute"
-      width={"100%"}
-      maxWidth={700}
       bottom={0}
       py={4}
-      pr={4}
     >
       <Container
-        maxW={'6xl'}
+        maxW={'3xl'}
       >
         <HStack display="flex" justifyContent="space-between">
           <Text fontSize="sm">

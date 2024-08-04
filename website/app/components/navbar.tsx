@@ -16,8 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Link from 'next/link';
 
 interface ILinks {
 	id: number;
@@ -25,21 +24,23 @@ interface ILinks {
 	name: string;
 }
 
-const Links = [{ id: 1, link: "#intro", name: "Intro" }, { id: 2, link: "#projects", name: "Projects" }]
+const Links = [{ id: 1, link: "about", name: "About" }, { id: 2, link: "work", name: "Work" }]
 
 const NavLink = (props: ILinks) => {
 	return (
 		<Box
-			as="a"
+			as="div"
 			px={2}
 			py={1}
 			rounded={'md'}
 			_hover={{
 				textDecoration: 'none',
-				bg: useColorModeValue('light.100', 'dark.600'),
+				bg: useColorModeValue('gray.200', 'gray.600'),
 			}}
-			href={props.link}>
-			{props.name}
+		>
+			<Link href={props.link}>
+				{props.name}
+			</Link>
 		</Box>
 	)
 }
@@ -48,14 +49,13 @@ export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode()
 
 	return (
-		<Box position={"fixed"} as="nav" w="100%" bg={useColorModeValue('light.25', 'dark.700')} css={{ backdropFilter: 'blur(10px)' }}
+		<Box position={"fixed"} as="nav" w="100%" css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={2}>
-			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
+			<Container display={"flex"} p={2} maxW={'3xl'} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
 				<Stack
 					direction={{ base: 'column', md: 'row' }}
 					display={{ base: 'none', md: 'flex' }}
 					width={{ base: 'full', md: 'max-content' }}
-					alignItems="center"
 					flexGrow={1}
 					mt={{ base: 4, md: 0 }}
 				>
@@ -63,7 +63,7 @@ export default function Navbar() {
 						{Links.map((Link) => <NavLink {...Link} key={Link.id} />)}
 					</HStack>
 				</Stack>
-				<Box flex={1} justifyContent="space-between">
+				<Box>
 					<Button onClick={toggleColorMode}>
 						{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 					</Button>

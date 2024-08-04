@@ -1,15 +1,12 @@
-import Footer from "./components/footer";
-import Intro from "./components/intro";
-
 import * as React from 'react';
-
 import { Flex } from "@chakra-ui/react";
 
-const Home: React.FC = () => {
+import Intro from './components/intro';
+
+const Home = () => {
   return (
     <Flex direction="column" minH="90vh">
       <Intro />
-      <Footer />
     </Flex>
   )
 };
