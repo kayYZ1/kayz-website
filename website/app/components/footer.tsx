@@ -16,7 +16,7 @@ export default function Footer() {
       w="100%"
       position="absolute"
       bottom={0}
-      py={4}
+      pb={1}
     >
       <Container
         maxW={"container.md"}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import Intro from '../components/intro';
 
 export default async function MainLayout({
@@ -10,9 +10,9 @@ export default async function MainLayout({
   return (
     <Flex direction="column" minH="90vh">
       <Intro />
-      <Container w="100%">
+      <Flex direction="column" py={5}>
         {children}
-      </Container>
+      </Flex>
     </Flex>
   );
 }

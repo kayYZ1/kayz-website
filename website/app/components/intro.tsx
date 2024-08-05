@@ -7,8 +7,7 @@ const Intro: React.FC = () => {
     <Box w="100%" p={2} display="flex">
       <HStack spacing="24px">
         <WrapItem>
-          <Avatar size="xl" name="gh-avatar"
-            src="https://avatars.githubusercontent.com/u/106306274?s=400&u=cc5ee13eeb28a2385bb361d395d506a14ea6a792&v=4" />
+          <Avatar size="xl" name="avi placeholder" />
         </WrapItem>
         <Box>
           <Text fontSize='xl'>Kacper</Text>
