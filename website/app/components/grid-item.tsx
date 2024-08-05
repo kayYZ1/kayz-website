@@ -15,12 +15,10 @@ export const GridItem = (project: Project) => {
         <Image
           src={project.image}
           alt={project.title}
-          width={700}
-          height={300}
           style={{ borderRadius: 15 }}
         />
         <LinkOverlay as="div" href="#">
-          <Text mt={2} fontSize={18}>
+          <Text mt={2} fontSize={16}>
             {project.title}
           </Text>
         </LinkOverlay>

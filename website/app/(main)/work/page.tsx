@@ -11,9 +11,9 @@ import angularMap from "@/public/angular-map.png"
 const projects: Project[] = [
   {
     id: 1,
-    title: "AWS Article Web Scraping Tool",
-    desc: "Application that uses web scraping to fetch articles from different websites given some query.",
-    image: awsScraper
+    title: "Interactive map of Opole for Tourists",
+    desc: "Web application made with Angular that showcase various objects to visit in Opole (Poland).",
+    image: angularMap
   },
   {
     id: 2,
@@ -23,9 +23,9 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Interactive map of Opole for Tourists",
-    desc: "Web application made with Angular that showcase various objects to visit in Opole (Poland).",
-    image: angularMap
+    title: "AWS Article Web Scraping Tool",
+    desc: "Application that uses web scraping to fetch articles from different websites given some query.",
+    image: awsScraper
   },
 ]
 
