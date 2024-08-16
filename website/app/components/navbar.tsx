@@ -35,7 +35,7 @@ const NavLink = (props: ILinks) => {
 			rounded={'md'}
 			_hover={{
 				textDecoration: 'none',
-				bg: useColorModeValue('gray.200', 'gray.600'),
+				bg: useColorModeValue('gray.200', 'gray.500'),
 			}}
 		>
 			<Link href={props.link}>
