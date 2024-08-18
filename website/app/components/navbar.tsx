@@ -49,7 +49,7 @@ export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode()
 
 	return (
-		<Box position={"fixed"} as="nav" w="100%" css={{ backdropFilter: 'blur(10px)' }}
+		<Box bg={useColorModeValue("#f7efe4", "#2b2b2e")} position={"fixed"} as="nav" w="100%" css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={2}>
 			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
 				<Stack

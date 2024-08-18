@@ -22,8 +22,8 @@ export default function Footer() {
         maxW={"container.md"}
       >
         <HStack display="flex" justifyContent="space-between">
-          <Text fontSize="sm">
-            @2024 kayz
+          <Text fontSize="sm" pt={2}>
+            @2024kayz
           </Text>
           <Box>
             <IconButton
