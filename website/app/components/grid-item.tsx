@@ -10,14 +10,14 @@ export const GridItem = (project: Project) => {
       <LinkBox
         as={NextLink}
         cursor="pointer"
-        href="#"
+        href={project.link}
       >
         <Image
           src={project.image}
           alt={project.title}
           style={{ borderRadius: 15 }}
         />
-        <LinkOverlay as="div" href="#">
+        <LinkOverlay as="div">
           <Text mt={2} fontSize={16}>
             {project.title}
           </Text>
