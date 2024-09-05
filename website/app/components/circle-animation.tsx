@@ -16,12 +16,13 @@ const CircleAnimation = ({ children, color }: CircleAnimationProps) => {
         content: '""',
         position: "absolute",
         top: "-10px",
-        left: "-20px",
+        left: "-15px",
         width: "200%",
         height: "100%",
         borderRadius: "50%",
         border: `2px solid ${color}`,
-        animation: `${styles.drawCircle} 2s ease-out forwards`,
+        opacity: "0.5",
+        animation: `${styles.drawCircle} 1.5s linear forwards`,
         zIndex: "-1",
       }}
     >
