@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
 import { Providers } from "./providers";
 import { Container } from "@chakra-ui/react";
@@ -7,10 +7,10 @@ import { Container } from "@chakra-ui/react";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
-const inter = Inter({
-  weight: '300',
-  subsets: ["latin"]
-});
+const openSans = Open_Sans({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: "Portfolio website",
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={openSans.className}>
         <Providers>
           <Navbar />
           <Container maxW={"container.md"} pt={20}>

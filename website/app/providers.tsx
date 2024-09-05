@@ -12,12 +12,7 @@ const styles = {
   })
 }
 
-const config = {
-  initialColorMode: 'dark',
-  useSystemColorMode: true
-}
-
-const theme = extendTheme({ config, styles })
+const theme = extendTheme({ styles })
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return <ChakraProvider theme={theme}>{children}</ChakraProvider>

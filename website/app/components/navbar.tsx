@@ -1,5 +1,4 @@
-'use client'
-
+"use client"
 import {
 	Box,
 	HStack,
@@ -14,8 +13,8 @@ import {
 	MenuList,
 	MenuItem,
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+
+import { MoonIcon, SunIcon, HamburgerIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 
 interface ILinks {
@@ -49,7 +48,7 @@ export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode()
 
 	return (
-		<Box bg={useColorModeValue("#f7efe4", "#2b2b2e")} position={"fixed"} as="nav" w="100%" css={{ backdropFilter: 'blur(10px)' }}
+		<Box position={"fixed"} as="nav" w="100%" css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={2}>
 			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
 				<Stack

@@ -1,5 +1,3 @@
-"use client"
-
 import GridItem from "@/app/components/grid-item"
 import { Project } from "@/app/ts/types"
 import { SimpleGrid } from "@chakra-ui/react"
@@ -32,7 +30,7 @@ const projects: Project[] = [
   },
 ]
 
-export default function Work() {
+const Work = () => {
   return (
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
@@ -45,3 +43,5 @@ export default function Work() {
     </SimpleGrid>
   )
 }
+
+export default Work
