@@ -4,7 +4,7 @@ import CircleAnimation from "../components/circle-animation"
 const Bio = () => {
   return (
     <Box>
-      <CircleAnimation color="blue">
+      <CircleAnimation color="#1E90FF">
         <Text fontSize="xl" fontWeight="bold" textDecoration="underline" mb={4}>
           Bio
         </Text>

@@ -14,19 +14,19 @@ export default function Footer() {
       w="100%"
       position="absolute"
       bottom={0}
-      pb={1}
     >
       <Container
         maxW={"container.md"}
       >
         <HStack display="flex" justifyContent="space-between">
           <Text fontSize="sm" pt={2}>
-            @2024kayz
+            @2024 kayz
           </Text>
           <Box>
             <IconButton
               size="sm"
               as="a"
+              target='_blank'
               href="https://github.com/kayYZ1"
               aria-label="GitHub"
               icon={<FaGithub />}
@@ -36,7 +36,8 @@ export default function Footer() {
             <IconButton
               size="sm"
               as="a"
-              href="https://www.linkedin.com/in/your-linkedin-profile"
+              target='_blank'
+              href="https://www.linkedin.com/in/kacper-manczyk/"
               aria-label="LinkedIn"
               icon={<FaLinkedin />}
               ml={2}
