@@ -12,7 +12,6 @@ export default function Footer() {
     <Box
       as="footer"
       w="100%"
-      position="absolute"
       bottom={0}
     >
       <Container

@@ -40,7 +40,7 @@ const NavLink = (props: ILinks) => {
 			<Link href={props.link}>
 				{props.name}
 			</Link>
-		</Box>
+		</Box >
 	)
 }
 
@@ -50,7 +50,13 @@ export default function Navbar() {
 	return (
 		<Box position={"fixed"} as="nav" w="100%" css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={2}>
-			<Container display={"flex"} p={2} maxW={"container.md"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-between"}>
+			<Container
+				display={"flex"}
+				p={2}
+				maxW={"container.md"}
+				flexWrap={"wrap"}
+				alignItems={"center"}
+				justifyContent={"space-between"}>
 				<Stack
 					direction={{ base: 'column', md: 'row' }}
 					display={{ base: 'none', md: 'flex' }}
@@ -67,7 +73,7 @@ export default function Navbar() {
 						{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 					</Button>
 					<Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-						<Menu isLazy id="nav-menu">
+						<Menu isLazy>
 							<MenuButton
 								as={IconButton}
 								icon={<HamburgerIcon />}
