@@ -12,23 +12,15 @@ const Bio = () => {
       <UnorderedList spacing={2} styleType="none" ml={0} fontSize="sm">
         <ListItem display="flex" alignItems="center">
           <Box as="span" mr={2} color="blue.500">•</Box>
-          Born in Opole, Poland in 1999
+          Born in Opole, Poland in 2001
         </ListItem>
         <ListItem display="flex" alignItems="center">
           <Box as="span" mr={2} color="blue.500">•</Box>
-          Started coding at the age of 5
+          Graduated high school in 2020
         </ListItem>
         <ListItem display="flex" alignItems="center">
           <Box as="span" mr={2} color="blue.500">•</Box>
-          Graduated high school with honors in 2018
-        </ListItem>
-        <ListItem display="flex" alignItems="center">
-          <Box as="span" mr={2} color="blue.500">•</Box>
-          Enrolled in Computer Science at Opole University of Technology
-        </ListItem>
-        <ListItem display="flex" alignItems="center">
-          <Box as="span" mr={2} color="blue.500">•</Box>
-          Completed first internship as a junior web developer in 2022
+          Enrolled in Computer Science at Opole University of Technology 2021-2025
         </ListItem>
       </UnorderedList>
     </Box>
