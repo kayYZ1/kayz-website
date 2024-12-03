@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import {
 	Box,
 	HStack,
@@ -12,7 +12,7 @@ import {
 	MenuButton,
 	MenuList,
 	MenuItem,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
 import { MoonIcon, SunIcon, HamburgerIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
@@ -23,67 +23,83 @@ interface ILinks {
 	name: string;
 }
 
-const Links = [{ id: 1, link: "/", name: "Home" }, { id: 2, link: "work", name: "Work" }]
+const Links = [
+	{ id: 1, link: '/', name: 'Home' },
+	{ id: 2, link: 'projects', name: 'Projects' },
+];
 
 const NavLink = (props: ILinks) => {
 	return (
 		<Box
-			as="div"
+			as='div'
 			px={2}
 			py={1}
 			rounded={'md'}
 			_hover={{
 				textDecoration: 'none',
 				bg: useColorModeValue('gray.200', 'gray.500'),
-			}}
-		>
-			<Link href={props.link}>
-				{props.name}
-			</Link>
-		</Box >
-	)
-}
+			}}>
+			<Link href={props.link}>{props.name}</Link>
+		</Box>
+	);
+};
 
 export default function Navbar() {
-	const { colorMode, toggleColorMode } = useColorMode()
+	const { colorMode, toggleColorMode } = useColorMode();
 
 	return (
-		<Box position={"fixed"} as="nav" w="100%" css={{ backdropFilter: 'blur(10px)' }}
+		<Box
+			position={'fixed'}
+			as='nav'
+			w='100%'
+			css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={2}>
 			<Container
-				display={"flex"}
+				display={'flex'}
 				p={2}
-				maxW={"container.md"}
-				flexWrap={"wrap"}
-				alignItems={"center"}
-				justifyContent={"space-between"}>
+				maxW={'container.md'}
+				flexWrap={'wrap'}
+				alignItems={'center'}
+				justifyContent={'space-between'}>
 				<Stack
 					direction={{ base: 'column', md: 'row' }}
 					display={{ base: 'none', md: 'flex' }}
 					width={{ base: 'full', md: 'max-content' }}
 					flexGrow={1}
-					mt={{ base: 4, md: 0 }}
-				>
-					<HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-						{Links.map((Link) => <NavLink {...Link} key={Link.id} />)}
+					mt={{ base: 4, md: 0 }}>
+					<HStack
+						as={'nav'}
+						spacing={4}
+						display={{ base: 'none', md: 'flex' }}>
+						{Links.map((Link) => (
+							<NavLink
+								{...Link}
+								key={Link.id}
+							/>
+						))}
 					</HStack>
 				</Stack>
 				<Box>
 					<Button onClick={toggleColorMode}>
 						{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 					</Button>
-					<Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+					<Box
+						ml={2}
+						display={{ base: 'inline-block', md: 'none' }}>
 						<Menu isLazy>
 							<MenuButton
 								as={IconButton}
 								icon={<HamburgerIcon />}
-								variant="outline"
-								aria-label="Options"
+								variant='outline'
+								aria-label='Options'
 							/>
 							<MenuList>
 								{Links.map((link) => (
 									<MenuItem key={link.id}>
-										<NavLink {...link} key={link.id} />
+										<NavLink
+											{...link}
+											key={link.id}
+										/>
 									</MenuItem>
 								))}
 							</MenuList>
@@ -92,5 +108,5 @@ export default function Navbar() {
 				</Box>
 			</Container>
 		</Box>
-	)
+	);
 }
