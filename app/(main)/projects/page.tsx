@@ -53,7 +53,7 @@ const Projects = () => {
 			spacing={4}
 			fontWeight='300'
 			overflow='auto'
-			paddingRight={4}
+			paddingX={4}
 			maxHeight={650}
 			sx={{
 				'::-webkit-scrollbar': {
