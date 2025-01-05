@@ -1,21 +1,21 @@
 @keyframes drawCircle {
-  0% {
-    clip-path: circle(0%);
-  }
+	0% {
+		clip-path: circle(0%);
+	}
 
-  25% {
-    clip-path: circle(25%);
-  }
+	25% {
+		clip-path: circle(25%);
+	}
 
-  50% {
-    clip-path: circle(50%);
-  }
+	50% {
+		clip-path: circle(50%);
+	}
 
-  75% {
-    clip-path: circle(75%);
-  }
+	75% {
+		clip-path: circle(75%);
+	}
 
-  100% {
-    clip-path: circle(100%);
-  }
+	100% {
+		clip-path: circle(100%);
+	}
 }
