@@ -13,7 +13,7 @@ export default function Footer() {
 					<Text
 						fontSize='sm'
 						pt={2}>
-						@2024 kayz
+						{`@${new Date().getFullYear()} kayz`}
 					</Text>
 					<Box>
 						<IconButton

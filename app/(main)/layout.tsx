@@ -10,8 +10,7 @@ export default async function MainLayout({
 	return (
 		<Flex
 			direction='column'
-			minH='88vh'>
-			<Intro />
+			minH='87vh'>
 			<Flex
 				direction='column'
 				py={5}>
